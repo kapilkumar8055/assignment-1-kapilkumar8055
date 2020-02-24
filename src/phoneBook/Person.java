@@ -8,6 +8,13 @@ public class Person {
     private ArrayList<String> ContactNumbers;
     private String email;
 
+    public Person(String firstName, String lastName, ArrayList<String> contactNumbers, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        ContactNumbers = contactNumbers;
+        this.email = email;
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -29,13 +36,6 @@ public class Person {
     }
 
     public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Person(String firstName, String lastName, ArrayList<String> contactNumbers, String email) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        ContactNumbers = contactNumbers;
         this.email = email;
     }
 
