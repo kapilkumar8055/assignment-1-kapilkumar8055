@@ -22,7 +22,19 @@ public class Impementation implements Interface {
             System.out.println("Enter Last Name: ");
             lastName = scanner.next();
             if (checkUsingRegex.isLastName(lastName)) {
-
+                char result;
+                do {
+                    System.out.println("Enter your Phone Number");
+                    phoneNumber = scanner.next();
+                    if (checkUsingRegex.isphoneNumber(phoneNumber)) {
+                        numbers.add(phoneNumber);
+                    } else {
+                        System.out.println(".....Phone Number is not valid");
+                        break;
+                    }
+                    System.out.println("Would you like to add another contact number? (y/n): ");
+                    result = scanner.next().toLowerCase().charAt(0);
+                } while (result == 'y');
             }
         }
     }
