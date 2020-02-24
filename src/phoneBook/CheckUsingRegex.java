@@ -15,4 +15,10 @@ public class CheckUsingRegex {
         Matcher matcher = pattern.matcher(lastName);
         return matcher.matches();
     }
+
+    public boolean isphoneNumber(String Number) {
+        Pattern pattern = Pattern.compile("[9|8|7|6][0-9]{9}");
+        Matcher matcher = pattern.matcher(Number);
+        return matcher.matches();
+    }
 }
