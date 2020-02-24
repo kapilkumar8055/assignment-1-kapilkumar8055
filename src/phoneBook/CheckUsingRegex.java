@@ -21,4 +21,12 @@ public class CheckUsingRegex {
         Matcher matcher = pattern.matcher(Number);
         return matcher.matches();
     }
+
+    public boolean isEmailAddress(String emailAddress) {
+        //check email address of only GLA university
+        Pattern pattern = Pattern.compile("(---)|(([A-Za-z]{3,15})\\.[a-z]{3,15}\\_([a-z]{2,4}[0-9]{2})@([a-z]{2,7})\\.([a-z]{1,5})\\.([a-z]{2,4}))");
+        Matcher matcher = pattern.matcher(emailAddress);
+        return matcher.matches();
+    }
+
 }
