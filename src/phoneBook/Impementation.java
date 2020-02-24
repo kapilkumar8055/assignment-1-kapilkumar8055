@@ -46,7 +46,17 @@ public class Impementation implements Interface {
                 } else {
                     System.out.println("Email Address:  " + emailAddress);
                 }
+                if (checkUsingRegex.isFirstName(firstName) && checkUsingRegex.isEmailAddress(emailAddress) && checkUsingRegex.isLastName(lastName) && checkUsingRegex.isphoneNumber(phoneNumber)) {
+                    Person person = new Person(firstName, lastName, numbers, emailAddress);
+                    contact.add(person);
+                } else {
+                    System.out.println("\n..Please Enter Correct Name , PhoneNumber , email id - Syntax Error!..");
+                }
+            } else {
+                System.out.println("..Syntax Error!..");
             }
+        } else {
+            System.out.println("..Syntax Error!..");
         }
     }
 
