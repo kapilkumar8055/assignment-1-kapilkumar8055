@@ -60,6 +60,7 @@ public class Impementation implements Interface {
         }
     }
 
+    ArrayList<Integer> matched = new ArrayList<>();
     @Override
     public void deleteContact() {
         int no = 1;
@@ -82,6 +83,30 @@ public class Impementation implements Interface {
 
     @Override
     public void searchContact() {
+        int count = 0;
+        if (contact.size() >= 0) {
+            System.out.println("You could search for a contact from their first names: ");
+            String firstName = scanner.next();
+            for (int k = 0; k < contact.size(); k++)
+                if (contact.get(k).getFirstName().equals(firstName)) {
+                    count++;
+                    matched.add(k);
+                }
+            System.out.println(count + " match found!");
+            if (matched.size() > 0)
+                for (int m = 0; m < matched.size(); m++) {
+
+                    System.out.println("-------- * -------- * -------- * --------");
+                    System.out.println("First Name: " + contact.get(matched.get(m)).getFirstName());
+                    System.out.println("Last Name: " + contact.get(matched.get(m)).getLastName());
+                    System.out.println("Contact Number(s): " + contact.get(matched.get(m)).getContactNumbers());
+                    System.out.println("Email Address: " + contact.get(matched.get(m)).getEmail());
+                    System.out.println("-------- * -------- * -------- * --------");
+                }
+        } else {
+
+            System.out.println("..........SORRY NO RESULTS FOUND............");
+        }
 
     }
 
