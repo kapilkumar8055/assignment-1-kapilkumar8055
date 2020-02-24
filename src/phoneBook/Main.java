@@ -15,6 +15,33 @@ public class Main {
             System.out.println("Press 5 to exit program \n");
             System.out.println("Enter your Choice first! ");
             int Choice = scanner.nextInt();
+            switch (Choice) {
+                case 1:
+                    System.out.println("You have chosen to add a new contact: ");
+                    impementation.addNewContact();
+                    break;
+                case 2:
+                    System.out.println("You have chosen to view all contacts:");
+                    impementation.viewAllContact();
+                    break;
+                case 3:
+                    System.out.println("You have chosen to search any contact:");
+                    impementation.searchContact();
+                    break;
+                case 4:
+                    System.out.println("You have chosen to delete any contact:");
+                    impementation.deleteContact();
+                    break;
+                case 5:
+                    System.out.println("You have chosen to exit:");
+                    impementation.exit();
+                    System.out.println("----THANK YOU----");
+                    break;
+                default:
+                    System.out.println("please enter your choice wisely ");
+                    break;
+            }
         }
+        while (cases);
     }
 }

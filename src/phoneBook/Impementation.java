@@ -133,6 +133,6 @@ public class Impementation implements Interface {
 
     @Override
     public void exit() {
-        return;
+        System.exit(0);
     }
 }
