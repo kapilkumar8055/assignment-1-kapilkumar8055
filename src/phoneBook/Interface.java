@@ -8,4 +8,6 @@ public interface Interface {
     void searchContact();
 
     void deleteContact();
+
+    void exit();
 }
