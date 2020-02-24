@@ -10,6 +10,14 @@ public class Impementation implements Interface {
 
     @Override
     public void addNewContact() {
+        ArrayList<String> numbers = new ArrayList<>();
+        String firstName = "";
+        String lastName = "";
+        String emailAddress = "---";
+        String phoneNumber = "";
+        System.out.println("Enter the name of the Person");
+        System.out.println("Enter first Name: ");
+        firstName = scanner.next();
 
     }
 
