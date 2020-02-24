@@ -18,7 +18,13 @@ public class Impementation implements Interface {
         System.out.println("Enter the name of the Person");
         System.out.println("Enter first Name: ");
         firstName = scanner.next();
+        if (checkUsingRegex.isFirstName(firstName)) {
+            System.out.println("Enter Last Name: ");
+            lastName = scanner.next();
+            if (checkUsingRegex.isLastName(lastName)) {
 
+            }
+        }
     }
 
     @Override
