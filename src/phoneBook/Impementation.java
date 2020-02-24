@@ -62,7 +62,22 @@ public class Impementation implements Interface {
 
     @Override
     public void deleteContact() {
-
+        int no = 1;
+        if (contact.size() > 0) {
+            System.out.println("Here are all your Contacts : ");
+            for (int s = 0; s < contact.size(); s++) {
+                System.out.println(no + "." + contact.get(s).getFirstName() + " " + contact.get(s).getLastName());
+                no++;
+            }
+            int toDelete = scanner.nextInt();
+            System.out.println("Press the number against the contact to delete it: " + toDelete);
+            System.out.println(contact.get(toDelete - 1).getFirstName() + " " + contact.get(toDelete - 1).getLastName() + "'s " + "contact deleted from list!");
+            contact.remove(toDelete - 1);
+            contact.trimToSize();
+            matched.trimToSize();
+        } else {
+            System.out.println("..........SORRY NO RESULTS FOUND............");
+        }
     }
 
     @Override
