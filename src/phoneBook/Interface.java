@@ -6,4 +6,6 @@ public interface Interface {
     void viewAllContact();
 
     void searchContact();
+
+    void deleteContact();
 }
