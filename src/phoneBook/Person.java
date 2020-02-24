@@ -1,9 +1,11 @@
 package phoneBook;
 
+import java.util.ArrayList;
+
 public class Person {
     private String firstName;
     private String lastName;
-    private long[] number = new long[3];
+    private ArrayList<String> ContactNumbers;
     private String email;
 
     public String getFirstName() {
@@ -22,19 +24,26 @@ public class Person {
         this.lastName = lastName;
     }
 
-    public long[] getNumber() {
-        return number;
-    }
-
-    public void setNumber(long[] number) {
-        this.number = number;
-    }
-
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Person(String firstName, String lastName, ArrayList<String> contactNumbers, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        ContactNumbers = contactNumbers;
+        this.email = email;
+    }
+
+    public ArrayList<String> getContactNumbers() {
+        return ContactNumbers;
+    }
+
+    public void setContactNumbers(ArrayList<String> contactNumbers) {
+        ContactNumbers = contactNumbers;
     }
 }
