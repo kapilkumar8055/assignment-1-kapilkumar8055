@@ -9,4 +9,10 @@ public class CheckUsingRegex {
         Matcher matcher = pattern.matcher(firstName);
         return matcher.matches();
     }
+
+    public boolean isLastName(String lastName) {
+        Pattern pattern = Pattern.compile("([A-z]{4,15})");
+        Matcher matcher = pattern.matcher(lastName);
+        return matcher.matches();
+    }
 }
