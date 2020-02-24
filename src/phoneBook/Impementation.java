@@ -43,8 +43,9 @@ public class Impementation implements Interface {
                     if (checkUsingRegex.isEmailAddress(emailAddress)) {
                         System.out.println("Email Address:  " + emailAddress);
                     }
+                } else {
+                    System.out.println("Email Address:  " + emailAddress);
                 }
-
             }
         }
     }
