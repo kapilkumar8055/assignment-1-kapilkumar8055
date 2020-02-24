@@ -29,12 +29,22 @@ public class Impementation implements Interface {
                     if (checkUsingRegex.isphoneNumber(phoneNumber)) {
                         numbers.add(phoneNumber);
                     } else {
-                        System.out.println(".....Phone Number is not valid");
+                        System.out.println(".....Phone Number is not valid.....");
                         break;
                     }
                     System.out.println("Would you like to add another contact number? (y/n): ");
                     result = scanner.next().toLowerCase().charAt(0);
                 } while (result == 'y');
+                System.out.println("Would you like to add email address? (y/n): ");
+                char result1 = scanner.next().toLowerCase().charAt(0);
+                if (result1 == 'y') {
+                    System.out.println("Enter Email Address");
+                    emailAddress = scanner.next();
+                    if (checkUsingRegex.isEmailAddress(emailAddress)) {
+                        System.out.println("Email Address:  " + emailAddress);
+                    }
+                }
+
             }
         }
     }
