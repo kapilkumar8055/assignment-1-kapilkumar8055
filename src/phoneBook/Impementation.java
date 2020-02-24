@@ -112,7 +112,23 @@ public class Impementation implements Interface {
 
     @Override
     public void viewAllContact() {
-
+        if (contact.size() == 0) {
+            System.out.println("-------- * -------- * EMPTY - No Contacts yet *-------- * --------");
+        } else {
+            System.out.println("---Here are all your contacts---\n" +
+                    "-------- * -------- * -------- * --------");
+            for (int k = 0; k < contact.size(); k++) {
+                if (k != 0) {
+                    System.out.println("-------- * -------- **-------- * --------");
+                }
+                System.out.println("FirstName :" + contact.get(k).getFirstName());
+                System.out.println("Last Name :" + contact.get(k).getLastName());
+                System.out.println("Contacts Numbers: " + contact.get(k).getContactNumbers());
+                System.out.println("Email Address :" + contact.get(k).getEmail());
+                System.out.println();
+            }
+            System.out.println("-------- * -------- * -------- * --------");
+        }
     }
 
     @Override
